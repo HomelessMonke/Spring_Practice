@@ -1,0 +1,19 @@
+package homeless.monkey.com.mvc_task3.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+
+import java.util.List;
+
+public record OrderCreationRequestDto (
+        @NotEmpty
+        List<Long> productsIds,
+
+        @NotNull
+        Long customerId,
+
+        @NotBlank
+        String shippingAddress
+){}
+
